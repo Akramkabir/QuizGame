@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Engineering & Computing Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="quiz-card">
+      <!-- Quiz Header -->
+      <header class="quiz-header">
+        <h1 class="quiz-title">Computing & SE Quiz</h1>
+        <div class="status-bar" id="statusBar" style="display: none;">
+          <span class="question-tracker" id="questionTracker">Question 1 of 10</span>
+          <span class="score-tracker" id="scoreTracker">Score: 0</span>
+        </div>
+        <div class="progress-bar-container" id="progressBarContainer" style="display: none;">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+      </header>
+
+      <!-- Welcome / Start Screen -->
+      <section class="start-container" id="startContainer">
+        <div class="welcome-icon">💻</div>
+        <h2 class="start-heading">Are you ready to test your computing knowledge?</h2>
+        <p class="start-subtitle">
+          Challenge yourself with 10 questions covering Git, Data Structures, Operating Systems, Networking, and more!
+        </p>
+        <button class="btn btn-primary" id="startBtn">Start Quiz</button>
+      </section>
+
+      <!-- Quiz Body: Question & Options View (Initially Hidden) -->
+      <main class="quiz-body" id="quizBody" style="display: none;">
+        <div class="question-container">
+          <h2 class="question-text" id="questionText">Loading question...</h2>
+        </div>
+        <div class="options-grid" id="optionsContainer">
+          <!-- Options rendered dynamically via JavaScript -->
+        </div>
+      </main>
+
+      <!-- Quiz Results View (Initially Hidden) -->
+      <section class="results-container" id="resultsContainer" style="display: none;">
+        <div class="trophy-icon">🏆</div>
+        <h2 class="results-heading">Quiz Completed!</h2>
+        <p class="results-subtitle" id="resultsFeedback">Great job completing the quiz.</p>
+        
+        <div class="score-display-card">
+          <div class="score-large" id="finalScoreText">0 / 10</div>
+          <div class="score-percentage" id="finalPercentageText">0%</div>
+        </div>
+
+        <button class="btn btn-primary" id="restartBtn">Restart Quiz</button>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
